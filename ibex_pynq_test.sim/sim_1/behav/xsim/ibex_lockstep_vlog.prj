@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  -i "../../../../rtl/ibex_prim" --include "../../../../../../../../AMDDesignTools/2026.1/Vivado/data/rsb/busdef" --include "../../../../rtl/ibex_prim" \
+"../../../../rtl/ibex/ibex_pkg.sv" \
+"../../../../rtl/ibex/ibex_alu.sv" \
+"../../../../rtl/ibex/ibex_cheriot_pkg.sv" \
+"../../../../rtl/ibex/ibex_core.sv" \
+"../../../../rtl/ibex/ibex_counter.sv" \
+"../../../../rtl/ibex/ibex_cs_registers.sv" \
+"../../../../rtl/ibex/ibex_ex_block.sv" \
+"../../../../rtl/ibex_prim/prim_secded_pkg.sv" \
+"../../../../rtl/ibex/ibex_multdiv_fast.sv" \
+"../../../../rtl/ibex/ibex_multdiv_slow.sv" \
+"../../../../rtl/ibex/ibex_register_file_ff.sv" \
+"../../../../rtl/ibex/ibex_register_file_fpga.sv" \
+"../../../../rtl/ibex/ibex_register_file_latch.sv" \
+"../../../../rtl/ibex_prim/prim_buf.sv" \
+"../../../../rtl/ibex_prim/prim_clock_gating.sv" \
+"../../../../rtl/ibex_prim/prim_flop.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_39_32_dec.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_39_32_enc.sv" \
+"../../../../rtl/ibex/ibex_lockstep.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

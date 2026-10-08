@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ibex_alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file 'prim_assert_standard_macros.svh' [../../../../rtl/ibex_prim/prim_assert.sv:110]
+ERROR: [VRFC 10-3195] cannot open include file 'prim_assert_sec_cm.svh' [../../../../rtl/ibex_prim/prim_assert.sv:187]
+ERROR: [VRFC 10-3195] cannot open include file 'prim_flop_macros.sv' [../../../../rtl/ibex_prim/prim_assert.sv:188]
+ERROR: [VRFC 10-3195] cannot open include file 'dv_fcov_macros.svh' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:12]
+INFO: [VRFC 10-311] analyzing module ibex_core
+ERROR: [VRFC 10-3805] use of undefined macro 'ASSERT_INIT' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:640]
+ERROR: [VRFC 10-4982] syntax error near '(' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:640]
+ERROR: [VRFC 10-4982] syntax error near '==' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:641]
+ERROR: [VRFC 10-4982] syntax error near 'end' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:650]
+ERROR: [VRFC 10-8549] SystemVerilog 2017 keyword 'end' used in incorrect context [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:650]
+ERROR: [VRFC 10-3805] use of undefined macro 'ASSERT' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1343]
+ERROR: [VRFC 10-4982] syntax error near '(' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1343]
+ERROR: [VRFC 10-4982] syntax error near '!' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1344]
+ERROR: [VRFC 10-4982] syntax error near '(' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1387]
+ERROR: [VRFC 10-4982] syntax error near '(' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1394]
+ERROR: [VRFC 10-4982] syntax error near '!' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1398]
+ERROR: [VRFC 10-4982] syntax error near '(' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1426]
+ERROR: [VRFC 10-4982] syntax error near '(' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1579]
+ERROR: [VRFC 10-4982] syntax error near '}' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1584]
+ERROR: [VRFC 10-3805] use of undefined macro 'ASSERT_KNOWN' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:1585]
+INFO: [VRFC 10-10021] Sorry, too many errors..

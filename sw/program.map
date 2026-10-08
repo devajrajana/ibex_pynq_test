@@ -1,0 +1,59 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00000000         0x00008000         xr
+RAM              0x00008000         0x00004000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000       0x90
+ *(.text.start)
+ *(.text*)
+ .text          0x00000000       0x10 C:\Users\devaj\AppData\Local\Temp\ccwIBWhm.o
+                0x00000000                _start
+ .text          0x00000010        0x0 C:\Users\devaj\AppData\Local\Temp\ccqtLlPt.o
+ .text.startup  0x00000010       0x80 C:\Users\devaj\AppData\Local\Temp\ccqtLlPt.o
+                0x00000010                main
+ *(.rodata*)
+
+.data           0x00008000        0x0
+ *(.data*)
+ .data          0x00008000        0x0 C:\Users\devaj\AppData\Local\Temp\ccwIBWhm.o
+ .data          0x00008000        0x0 C:\Users\devaj\AppData\Local\Temp\ccqtLlPt.o
+ *(.sdata*)
+
+.bss            0x00008000       0x10
+ *(.bss*)
+ .bss           0x00008000        0x0 C:\Users\devaj\AppData\Local\Temp\ccwIBWhm.o
+ .bss           0x00008000        0x0 C:\Users\devaj\AppData\Local\Temp\ccqtLlPt.o
+ *(.sbss*)
+ .sbss          0x00008000       0x10 C:\Users\devaj\AppData\Local\Temp\ccqtLlPt.o
+                0x00008000                measured_latency
+                0x00008004                result_z
+                0x00008008                result_y
+                0x0000800c                result_x
+ *(COMMON)
+LOAD C:\Users\devaj\AppData\Local\Temp\ccwIBWhm.o
+LOAD C:\Users\devaj\AppData\Local\Temp\ccqtLlPt.o
+OUTPUT(program.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a C:\Users\devaj\AppData\Local\Temp\ccwIBWhm.o
+ .riscv.attributes
+                0x0000001a       0x1c C:\Users\devaj\AppData\Local\Temp\ccqtLlPt.o
+
+.comment        0x00000000       0x33
+ .comment       0x00000000       0x33 C:\Users\devaj\AppData\Local\Temp\ccqtLlPt.o
+                                 0x34 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 C:\Users\devaj\AppData\Local\Temp\ccqtLlPt.o

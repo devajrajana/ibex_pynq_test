@@ -1,0 +1,160 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 06-oct-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Thu Oct  8 02:23:46 2026
+# Process ID         : 19768
+# Current directory  : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1
+# Command line       : vivado.exe -log ibex_fpga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ibex_fpga_top.tcl
+# Log file           : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/ibex_fpga_top.vds
+# Journal file       : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1\vivado.jou
+# Running On         : Devaj
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12650H
+# CPU Frequency      : 2688 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 16849 MB
+# Swap memory        : 2493 MB
+# Total Virtual      : 19343 MB
+# Available Virtual  : 1975 MB
+#-----------------------------------------------------------
+source ibex_fpga_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 596.590 ; gain = 269.121
+Command: synth_design -top ibex_fpga_top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
+INFO: [Synth 8-7075] Helper process launched with PID 16964
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1416.508 ; gain = 576.082
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11067] parameter 'ADDR_W' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:368]
+WARNING: [Synth 8-11067] parameter 'BUS_SIZE' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:369]
+WARNING: [Synth 8-11067] parameter 'BUS_BYTES' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:370]
+WARNING: [Synth 8-11067] parameter 'BUS_W' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:371]
+WARNING: [Synth 8-11067] parameter 'IC_SIZE_BYTES' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:372]
+WARNING: [Synth 8-11067] parameter 'IC_NUM_WAYS' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:373]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_SIZE' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:374]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_BYTES' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:375]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_W' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:376]
+WARNING: [Synth 8-11067] parameter 'IC_NUM_LINES' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:377]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_BEATS' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:378]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_BEATS_W' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:379]
+WARNING: [Synth 8-11067] parameter 'IC_INDEX_W' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:380]
+WARNING: [Synth 8-11067] parameter 'IC_INDEX_HI' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:381]
+WARNING: [Synth 8-11067] parameter 'IC_TAG_SIZE' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:382]
+WARNING: [Synth 8-11067] parameter 'IC_OUTPUT_BEATS' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:383]
+WARNING: [Synth 8-11067] parameter 'IC_DATA_ECC_SIZE' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:384]
+WARNING: [Synth 8-11067] parameter 'IC_TAG_ECC_SIZE' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:385]
+WARNING: [Synth 8-11067] parameter 'SCRAMBLE_KEY_W' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:387]
+WARNING: [Synth 8-11067] parameter 'SCRAMBLE_NONCE_W' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:388]
+WARNING: [Synth 8-11067] parameter 'PMP_MAX_REGIONS' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:391]
+WARNING: [Synth 8-11067] parameter 'PMP_CFG_W' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:392]
+WARNING: [Synth 8-11067] parameter 'PMP_ADDR_MSB' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:395]
+WARNING: [Synth 8-11067] parameter 'PMP_ADDR_LSB' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:398]
+WARNING: [Synth 8-11067] parameter 'PMP_I' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:401]
+WARNING: [Synth 8-11067] parameter 'PMP_I2' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:402]
+WARNING: [Synth 8-11067] parameter 'PMP_D' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:403]
+WARNING: [Synth 8-11067] parameter 'CSR_OFF_PMP_CFG' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:669]
+WARNING: [Synth 8-11067] parameter 'CSR_OFF_PMP_ADDR' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:670]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MIE_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:673]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MPIE_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:674]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MPP_BIT_LOW' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:675]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MPP_BIT_HIGH' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:676]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MPRV_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:677]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_TW_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:678]
+WARNING: [Synth 8-11067] parameter 'CSR_MISA_MXL' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:681]
+WARNING: [Synth 8-11067] parameter 'CSR_MSIX_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:684]
+WARNING: [Synth 8-11067] parameter 'CSR_MTIX_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:685]
+WARNING: [Synth 8-11067] parameter 'CSR_MEIX_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:686]
+WARNING: [Synth 8-11067] parameter 'CSR_MFIX_BIT_LOW' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:687]
+WARNING: [Synth 8-11067] parameter 'CSR_MFIX_BIT_HIGH' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:688]
+WARNING: [Synth 8-11067] parameter 'CSR_MSECCFG_MML_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:691]
+WARNING: [Synth 8-11067] parameter 'CSR_MSECCFG_MMWP_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:692]
+WARNING: [Synth 8-11067] parameter 'CSR_MSECCFG_RLB_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:693]
+WARNING: [Synth 8-11067] parameter 'LfsrWidth' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:710]
+WARNING: [Synth 8-11067] parameter 'RndCnstLfsrSeedDefault' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:713]
+WARNING: [Synth 8-11067] parameter 'RndCnstLfsrPermDefault' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:714]
+WARNING: [Synth 8-11067] parameter 'RndCnstIbexKeyDefault' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:717]
+WARNING: [Synth 8-11067] parameter 'RndCnstIbexNonceDefault' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:719]
+WARNING: [Synth 8-11067] parameter 'IbexMuBiWidth' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:724]
+WARNING: [Synth 8-11067] parameter 'IbexMuBiOn' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:731]
+WARNING: [Synth 8-11067] parameter 'IbexMuBiOff' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:732]
+WARNING: [Synth 8-11067] parameter 'PmpCfgRst' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:741]
+WARNING: [Synth 8-11067] parameter 'PmpAddrRst' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:763]
+WARNING: [Synth 8-11067] parameter 'PmpMseccfgRst' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:782]
+WARNING: [Synth 8-11067] parameter 'ADDR_W' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:20]
+WARNING: [Synth 8-11067] parameter 'CBOUND_W' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:21]
+WARNING: [Synth 8-11067] parameter 'CEXP_W' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:22]
+WARNING: [Synth 8-11067] parameter 'EXP_W' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:23]
+WARNING: [Synth 8-11067] parameter 'OTYPE_W' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:24]
+WARNING: [Synth 8-11067] parameter 'CPERMS_W' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:25]
+WARNING: [Synth 8-11067] parameter 'PERMS_W' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:26]
+WARNING: [Synth 8-11067] parameter 'REGCAP_W' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:28]
+WARNING: [Synth 8-11067] parameter 'OTYPE_UNSEALED' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:55]
+WARNING: [Synth 8-11067] parameter 'OTYPE_SENTRY_II_FWD' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:56]
+WARNING: [Synth 8-11067] parameter 'OTYPE_SENTRY_ID_FWD' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:57]
+WARNING: [Synth 8-11067] parameter 'OTYPE_SENTRY_IE_FWD' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:58]
+WARNING: [Synth 8-11067] parameter 'OTYPE_SENTRY_ID_BKWD' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:59]
+WARNING: [Synth 8-11067] parameter 'OTYPE_SENTRY_IE_BKWD' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:60]
+WARNING: [Synth 8-11067] parameter 'MAXCEXP' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:63]
+WARNING: [Synth 8-11067] parameter 'MAXEXP' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:64]
+WARNING: [Synth 8-11067] parameter 'NULL_CAP' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:144]
+WARNING: [Synth 8-11067] parameter 'NULL_DECODED_CAP' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:145]
+WARNING: [Synth 8-11067] parameter 'CPERMS_TX' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:148]
+WARNING: [Synth 8-11067] parameter 'CPERMS_TM' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:149]
+WARNING: [Synth 8-11067] parameter 'CPERMS_TS' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:150]
+WARNING: [Synth 8-11067] parameter 'ROOT_DECODED_CAP_TX' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:154]
+WARNING: [Synth 8-11067] parameter 'ROOT_CAP_TX' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:167]
+WARNING: [Synth 8-11067] parameter 'ROOT_CAP_TM' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:170]
+WARNING: [Synth 8-11067] parameter 'ROOT_CAP_TS' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:182]
+WARNING: [Synth 8-11067] parameter 'PERM_MRW_IMSK' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:195]
+WARNING: [Synth 8-11067] parameter 'PERM_MRO_IMSK' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:196]
+WARNING: [Synth 8-11067] parameter 'PERM_MWO_IMSK' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:197]
+WARNING: [Synth 8-11067] parameter 'PERM_MDO_IMSK' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:198]
+WARNING: [Synth 8-11067] parameter 'PERM_EXE_IMSK' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:199]
+WARNING: [Synth 8-11067] parameter 'PERM_SEA_IMSK' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:200]
+WARNING: [Synth 8-11067] parameter 'CHERIOT_SCR_MEPCC' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:914]
+WARNING: [Synth 8-11067] parameter 'CHERIOT_SCR_MSCRATCHC' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:915]
+WARNING: [Synth 8-11067] parameter 'CHERIOT_SCR_MTDC' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:916]
+WARNING: [Synth 8-11067] parameter 'CHERIOT_SCR_MTCC' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:917]
+WARNING: [Synth 8-11067] parameter 'CHERIOT_SCR_DSCRATCHC1' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:918]
+WARNING: [Synth 8-11067] parameter 'CHERIOT_SCR_DSCRATCHC0' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:919]
+WARNING: [Synth 8-11067] parameter 'CHERIOT_SCR_DEPCC' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:920]
+WARNING: [Synth 8-11067] parameter 'W_PVIO' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:923]
+WARNING: [Synth 8-11067] parameter 'PVIO_TAG' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:925]
+WARNING: [Synth 8-11067] parameter 'PVIO_SEAL' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:926]
+WARNING: [Synth 8-11067] parameter 'PVIO_EX' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:927]
+WARNING: [Synth 8-11067] parameter 'PVIO_LD' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:928]
+WARNING: [Synth 8-11067] parameter 'PVIO_SD' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:929]
+WARNING: [Synth 8-11067] parameter 'PVIO_SC' declared inside package 'ibex_cheriot_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv:930]
+INFO: [Common 17-14] Message 'Synth 8-11067' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-11241] undeclared symbol 'ibex_clk', assumed default net type 'wire' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_top.sv:541]
+INFO: [Synth 8-11241] undeclared symbol 'ibex_clk', assumed default net type 'wire' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_top.sv:569]
+INFO: [Synth 8-11241] undeclared symbol 'ibex_clk', assumed default net type 'wire' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_top.sv:597]
+INFO: [Synth 8-6157] synthesizing module 'ibex_fpga_top' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ibex_clk_wiz' [C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/.Xil/Vivado-19768-Devaj/realtime/ibex_clk_wiz_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_clk_wiz' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/.Xil/Vivado-19768-Devaj/realtime/ibex_clk_wiz_stub.v:6]
+ERROR: [Synth 8-439] module 'uart_tx' not found [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:48]
+	Parameter CLK_FREQ bound to: 32'sb00000010111110101111000010000000 
+	Parameter BAUD_RATE bound to: 32'sb00000000000000011100001000000000 
+ERROR: [Synth 8-6156] failed synthesizing module 'ibex_fpga_top' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1557.336 ; gain = 716.910
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+14 Infos, 101 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1557.336 ; gain = 942.422
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  8 02:24:10 2026...
