@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Wed Oct 14 10:31:51 2026
+# Process ID         : 16896
+# Current directory  : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/impl_1
+# Command line       : vivado.exe -log ibex_fpga_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ibex_fpga_top.tcl -notrace
+# Log file           : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/impl_1/ibex_fpga_top.vdi
+# Journal file       : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/impl_1\vivado.jou
+# Running On         : Devaj
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12650H
+# CPU Frequency      : 2688 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 16849 MB
+# Swap memory        : 1073 MB
+# Total Virtual      : 17923 MB
+# Available Virtual  : 4434 MB
+#-----------------------------------------------------------
+source ibex_fpga_top.tcl -notrace

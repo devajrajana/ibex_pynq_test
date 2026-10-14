@@ -1,40 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="7208" HostCore="16" HostMemory="016849879040">
+    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="2696" HostCore="16" HostMemory="016849879040">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="16372" HostCore="16" HostMemory="016849879040">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="21656" HostCore="16" HostMemory="016849879040">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="13732" HostCore="16" HostMemory="016849879040">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="12828" HostCore="16" HostMemory="016849879040">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="23512" HostCore="16" HostMemory="016849879040">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="13956" HostCore="16" HostMemory="016849879040">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="8768" HostCore="16" HostMemory="016849879040">
+    <Process Command="vivado.bat" Owner="devaj" Host="DEVAJ" Pid="11104" HostCore="16" HostMemory="016849879040">
     </Process>
 </ProcessHandle>

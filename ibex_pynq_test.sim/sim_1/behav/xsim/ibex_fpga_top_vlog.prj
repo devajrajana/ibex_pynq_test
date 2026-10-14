@@ -1,0 +1,76 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  -i "../../../../rtl/ibex_prim" -i "../../../../rtl/ibex" --include "../../../../../../../../AMDDesignTools/2026.1/Vivado/data/rsb/busdef" --include "../../../../rtl/ibex_prim" --include "../../../../rtl/ibex" --include "../../../../ibex_pynq_test.ip_user_files/ipstatic" \
+"../../../../ibex_pynq_test.gen/sources_1/ip/ibex_program_bram/sim/ibex_program_bram.v" \
+"../../../../ibex_pynq_test.gen/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz_clk_wiz.v" \
+"../../../../ibex_pynq_test.gen/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz.v" \
+
+sv xil_defaultlib  -i "../../../../rtl/ibex_prim" -i "../../../../rtl/ibex" --include "../../../../../../../../AMDDesignTools/2026.1/Vivado/data/rsb/busdef" --include "../../../../rtl/ibex_prim" --include "../../../../rtl/ibex" --include "../../../../ibex_pynq_test.ip_user_files/ipstatic" \
+"../../../../rtl/cordic_top.sv" \
+"../../../../rtl/ibex/ibex_pkg.sv" \
+"../../../../rtl/ibex/ibex_alu.sv" \
+"../../../../rtl/ibex/ibex_branch_predict.sv" \
+"../../../../rtl/ibex/ibex_cheriot_pkg.sv" \
+"../../../../rtl/ibex/ibex_cheriot_ex.sv" \
+"../../../../rtl/ibex/ibex_compressed_decoder.sv" \
+"../../../../rtl/ibex/ibex_controller.sv" \
+"../../../../rtl/ibex/ibex_core.sv" \
+"../../../../rtl/ibex/ibex_counter.sv" \
+"../../../../rtl/ibex/ibex_cs_registers.sv" \
+"../../../../rtl/ibex/ibex_csr.sv" \
+"../../../../rtl/ibex/ibex_decoder.sv" \
+"../../../../rtl/ibex/ibex_dummy_instr.sv" \
+"../../../../rtl/ibex/ibex_ex_block.sv" \
+"../../../../rtl/ibex/ibex_fetch_fifo.sv" \
+"../../../../rtl/ibex/ibex_icache.sv" \
+"../../../../rtl/ibex/ibex_id_stage.sv" \
+"../../../../rtl/ibex/ibex_if_stage.sv" \
+"../../../../rtl/ibex/ibex_load_store_unit.sv" \
+"../../../../rtl/ibex_prim/prim_secded_pkg.sv" \
+"../../../../rtl/ibex_prim/prim_util_pkg.sv" \
+"../../../../rtl/ibex/ibex_lockstep.sv" \
+"../../../../rtl/ibex/ibex_multdiv_fast.sv" \
+"../../../../rtl/ibex/ibex_multdiv_slow.sv" \
+"../../../../rtl/ibex/ibex_pmp.sv" \
+"../../../../rtl/ibex/ibex_prefetch_buffer.sv" \
+"../../../../rtl/ibex/ibex_register_file_ff.sv" \
+"../../../../rtl/ibex/ibex_register_file_fpga.sv" \
+"../../../../rtl/ibex/ibex_register_file_latch.sv" \
+"../../../../rtl/ibex_prim/prim_ram_1p_pkg.sv" \
+"../../../../rtl/ibex/ibex_top.sv" \
+"../../../../rtl/ibex/ibex_trvk.sv" \
+"../../../../rtl/ibex/ibex_wb_stage.sv" \
+"../../../../rtl/ibex_prim/prim_mubi_pkg.sv" \
+"../../../../rtl/ibex_prim/prim_buf.sv" \
+"../../../../rtl/ibex_prim/prim_cipher_pkg.sv" \
+"../../../../rtl/ibex_prim/prim_clock_gating.sv" \
+"../../../../rtl/ibex_prim/prim_clock_mux2.sv" \
+"../../../../rtl/ibex_prim/prim_count_pkg.sv" \
+"../../../../rtl/ibex_prim/prim_count.sv" \
+"../../../../rtl/ibex_prim/prim_fifo_sync.sv" \
+"../../../../rtl/ibex_prim/prim_fifo_sync_cnt.sv" \
+"../../../../rtl/ibex_prim/prim_flop.sv" \
+"../../../../rtl/ibex_prim/prim_lfsr.sv" \
+"../../../../rtl/ibex_prim/prim_prince.sv" \
+"../../../../rtl/ibex_prim/prim_ram_1p.sv" \
+"../../../../rtl/ibex_prim/prim_ram_1p_adv.sv" \
+"../../../../rtl/ibex_prim/prim_ram_1p_scr.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_22_16_dec.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_22_16_enc.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_28_22_dec.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_28_22_enc.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_39_32_dec.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_39_32_enc.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_64_57_dec.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_64_57_enc.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_hamming_22_16_dec.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_hamming_22_16_enc.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_hamming_39_32_dec.sv" \
+"../../../../rtl/ibex_prim/prim_secded_inv_hamming_39_32_enc.sv" \
+"../../../../rtl/ibex_prim/prim_subst_perm.sv" \
+"../../../../rtl/ibex_fpga_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

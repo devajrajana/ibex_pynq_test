@@ -1,0 +1,130 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Wed Oct 14 10:33:29 2026
+| Host         : Devaj running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file ibex_fpga_top_control_sets_placed.rpt
+| Design       : ibex_fpga_top
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    52 |
+|    Minimum number of control sets                        |    52 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    81 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    52 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    37 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               3 |            2 |
+| No           | No                    | Yes                    |            4719 |         1217 |
+| No           | Yes                   | No                     |              33 |            9 |
+| Yes          | No                    | No                     |             236 |           83 |
+| Yes          | No                    | Yes                    |             858 |          410 |
+| Yes          | Yes                   | No                     |             406 |          172 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------+------------------+----------------+--------------+
+|            Clock Signal           |                                           Enable Signal                                           |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------+------------------+----------------+--------------+
+|  u_ibex_clk_wiz/inst/clk_out1     | u_uart_tx/tx_i_1_n_0                                                                              | u_cordic/u_lin/SR[0]            |                1 |              1 |         1.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     |                                                                                                   |                                 |                2 |              3 |         1.50 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/id_stage_i/controller_i/ctrl_fsm_ns[0]                                     | u_cordic/u_lin/SR[0]            |                2 |              4 |         2.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_uart_tx/bit_count[3]_i_1_n_0                                                                    | u_cordic/u_lin/SR[0]            |                1 |              4 |         4.00 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/id_stage_i/controller_i/E[0]                                               | u_cordic/u_lin/SR[0]            |                3 |              6 |         2.00 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/load_store_unit_i/ctrl_update                                              | u_cordic/u_lin/SR[0]            |                5 |              6 |         1.20 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[27]_1[0]                  | u_cordic/u_lin/SR[0]            |                3 |              7 |         2.33 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/tx_busy_reg[0]                                            | u_cordic/u_lin/SR[0]            |                4 |              8 |         2.00 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/id_stage_i/controller_i/g_instr_rdata_nr.instr_rdata_id_o_reg[21]_rep[0]   | u_cordic/u_lin/SR[0]            |                5 |              8 |         1.60 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_uart_rx/E[0]                                                                                    | u_cordic/u_lin/SR[0]            |                2 |              8 |         4.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_uart_rx/rx_valid_i_1_n_0                                                                        | u_cordic/u_lin/SR[0]            |                1 |              8 |         8.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_uart_tx/clk_count[8]_i_1_n_0                                                                    | u_cordic/u_lin/SR[0]            |                3 |              9 |         3.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_uart_tx/tx_shift[8]_i_1_n_0                                                                     | u_cordic/u_lin/SR[0]            |                3 |              9 |         3.00 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/instr_gnt_reg[0]   |                                 |                6 |             13 |         2.17 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/valid_req_q_reg[0] |                                 |                4 |             13 |         3.25 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/FSM_sequential_ls_fsm_cs_reg[2][0]                        | u_cordic/u_lin/SR[0]            |               13 |             18 |         1.38 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[25]_0[0]                  | u_cordic/u_lin/SR[0]            |               10 |             18 |         1.80 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/id_stage_i/controller_i/ctrl_fsm_cs_reg[1]_5[0]                            | u_cordic/u_lin/SR[0]            |               11 |             24 |         2.18 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/load_store_unit_i/rdata_update                                             | u_cordic/u_lin/SR[0]            |               10 |             24 |         2.40 |
+|  u_ibex_clk_wiz/inst/clk_out1     | instr_rvalid                                                                                      | u_cordic/u_lin/SR[0]            |                7 |             26 |         3.71 |
+|  u_ibex_top/core_clock_gate_i/CLK |                                                                                                   | u_cordic/u_lin/SR[0]            |               18 |             30 |         1.67 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/instr_addr_en      |                                 |                8 |             31 |         3.88 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[21]_rep_6[0]              | u_cordic/u_lin/SR[0]            |               20 |             31 |         1.55 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[27]_0[0]                  | u_cordic/u_lin/SR[0]            |               21 |             31 |         1.48 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/cordic_start_pending_i_2_2[0]                             | u_cordic/u_lin/SR[0]            |               18 |             32 |         1.78 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/load_store_unit_i/data_gnt_reg[0]                                          | u_cordic/u_lin/SR[0]            |               16 |             32 |         2.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/cordic_start_pending_i_2_0[0]                             | u_cordic/u_lin/SR[0]            |               16 |             32 |         2.00 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/entry_en_2         |                                 |                8 |             32 |         4.00 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/entry_en_1         |                                 |                9 |             32 |         3.56 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/entry_en_0         |                                 |                8 |             32 |         4.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/E[0]                                                      | u_cordic/u_lin/SR[0]            |               16 |             32 |         2.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_cordic/cordic_status[1]                                                                         | u_cordic/lat_counter[0]_i_1_n_0 |                8 |             32 |         4.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_cordic/latency_reg[0]                                                                           | u_cordic/u_lin/SR[0]            |                8 |             32 |         4.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/FSM_sequential_ls_fsm_cs_reg[2]_0[0]                      | u_cordic/u_lin/SR[0]            |               15 |             32 |         2.13 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[21]_rep_3[0]              | u_cordic/u_lin/SR[0]            |               10 |             32 |         3.20 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[21]_rep_5[0]              | u_cordic/u_lin/SR[0]            |               23 |             32 |         1.39 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[21]_rep_4[0]              | u_cordic/u_lin/SR[0]            |               16 |             32 |         2.00 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[27]_2[0]                  | u_cordic/u_lin/SR[0]            |               16 |             32 |         2.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/adder_result_ext_o_carry_1[0]                             | u_cordic/u_lin/SR[0]            |               14 |             32 |         2.29 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/adder_result_ext_o_carry_0[0]                             | u_cordic/u_lin/SR[0]            |               14 |             32 |         2.29 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/cordic_lin_x[31]_i_2_0[0]                                 | u_cordic/u_lin/SR[0]            |               13 |             32 |         2.46 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[22]_rep_1[0]              | u_cordic/u_lin/SR[0]            |               16 |             32 |         2.00 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[22]_rep_1[1]              | u_cordic/u_lin/SR[0]            |               13 |             32 |         2.46 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/mcountinhibit_q_reg[0][1]                                       | u_cordic/u_lin/SR[0]            |               12 |             32 |         2.67 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/mcountinhibit_q_reg[0][0]                                       | u_cordic/u_lin/SR[0]            |               10 |             32 |         3.20 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/cordic_start_pending_i_2_3[0]                             | u_cordic/u_lin/SR[0]            |               13 |             32 |         2.46 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_ibex_top/u_ibex_core/ex_block_i/alu_i/cordic_start_pending_i_2_1[0]                             | u_cordic/u_lin/SR[0]            |               23 |             32 |         1.39 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/load_store_unit_i/addr_update                                              | u_cordic/u_lin/SR[0]            |               11 |             32 |         2.91 |
+|  u_ibex_top/core_clock_gate_i/CLK | u_ibex_top/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/fifo_i/E[0]               |                                 |               40 |             83 |         2.08 |
+|                                   | u_ibex_top/gen_regfile_fpga.register_file_i/g_plain_rf.we__0                                      |                                 |               11 |             88 |         8.00 |
+|  u_ibex_clk_wiz/inst/clk_out1     | u_cordic/ctrl_q0                                                                                  | u_cordic/u_lin/SR[0]            |              156 |            342 |         2.19 |
+|  u_ibex_clk_wiz/inst/clk_out1     |                                                                                                   | u_cordic/u_lin/SR[0]            |             1208 |           4722 |         3.91 |
++-----------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------+------------------+----------------+--------------+
+
+

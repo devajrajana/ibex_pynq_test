@@ -4,8 +4,8 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Thu Oct  8 02:23:46 2026
-# Process ID         : 19768
+# Start of session at: Wed Oct 14 10:25:16 2026
+# Process ID         : 13432
 # Current directory  : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1
 # Command line       : vivado.exe -log ibex_fpga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ibex_fpga_top.tcl
 # Log file           : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/ibex_fpga_top.vds
@@ -18,12 +18,12 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # CPU Physical cores : 10
 # CPU Logical cores  : 16
 # Host memory        : 16849 MB
-# Swap memory        : 2493 MB
-# Total Virtual      : 19343 MB
-# Available Virtual  : 1975 MB
+# Swap memory        : 1073 MB
+# Total Virtual      : 17923 MB
+# Available Virtual  : 4156 MB
 #-----------------------------------------------------------
 source ibex_fpga_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 596.590 ; gain = 269.121
+create_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 596.648 ; gain = 270.207
 Command: synth_design -top ibex_fpga_top -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7z020'
@@ -32,10 +32,9 @@ INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Designutils 20-5008] Incremental synthesis strategy default
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
-INFO: [Synth 8-7075] Helper process launched with PID 16964
+INFO: [Synth 8-7075] Helper process launched with PID 18160
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1416.508 ; gain = 576.082
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1418.285 ; gain = 578.199
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-11067] parameter 'ADDR_W' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:368]
 WARNING: [Synth 8-11067] parameter 'BUS_SIZE' declared inside package 'ibex_pkg' shall be treated as localparam [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv:369]
@@ -141,20 +140,1074 @@ INFO: [Common 17-14] Message 'Synth 8-11067' appears 100 times and further insta
 INFO: [Synth 8-11241] undeclared symbol 'ibex_clk', assumed default net type 'wire' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_top.sv:541]
 INFO: [Synth 8-11241] undeclared symbol 'ibex_clk', assumed default net type 'wire' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_top.sv:569]
 INFO: [Synth 8-11241] undeclared symbol 'ibex_clk', assumed default net type 'wire' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_top.sv:597]
+WARNING: [Synth 8-6901] identifier 'data_req' is used before its declaration [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:86]
+WARNING: [Synth 8-6901] identifier 'data_gnt' is used before its declaration [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:86]
+WARNING: [Synth 8-6901] identifier 'data_we' is used before its declaration [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:86]
+WARNING: [Synth 8-6901] identifier 'data_addr' is used before its declaration [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:87]
 INFO: [Synth 8-6157] synthesizing module 'ibex_fpga_top' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'ibex_clk_wiz' [C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/.Xil/Vivado-19768-Devaj/realtime/ibex_clk_wiz_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ibex_clk_wiz' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/.Xil/Vivado-19768-Devaj/realtime/ibex_clk_wiz_stub.v:6]
-ERROR: [Synth 8-439] module 'uart_tx' not found [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:48]
-	Parameter CLK_FREQ bound to: 32'sb00000010111110101111000010000000 
-	Parameter BAUD_RATE bound to: 32'sb00000000000000011100001000000000 
-ERROR: [Synth 8-6156] failed synthesizing module 'ibex_fpga_top' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ibex_clk_wiz' [C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/.Xil/Vivado-13432-Devaj/realtime/ibex_clk_wiz_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_clk_wiz' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/.Xil/Vivado-13432-Devaj/realtime/ibex_clk_wiz_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/uart_tx.sv:3]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/uart_tx.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/uart_rx.sv:4]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/uart_rx.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/uart_rx.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'ibex_program_bram' [C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/.Xil/Vivado-13432-Devaj/realtime/ibex_program_bram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_program_bram' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/.Xil/Vivado-13432-Devaj/realtime/ibex_program_bram_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'cordic_top' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:237]
+INFO: [Synth 8-6157] synthesizing module 'cordic_pipeline_generic' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:158]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter MAX_STAGES bound to: 16 - type: integer 
+	Parameter LATENCY_WIDTH bound to: 5 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 0 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized0' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 1 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized0' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized1' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 2 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized1' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized2' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 3 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized2' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized3' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 4 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized3' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized4' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 5 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized4' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized5' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 6 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized5' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized6' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 7 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized6' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized7' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 8 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized7' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized8' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 9 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized8' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized9' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 10 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized9' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized10' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 11 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized10' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized11' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 12 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized11' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized12' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 13 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized12' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized13' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 14 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized13' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized14' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 15 - type: integer 
+	Parameter MODE_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized14' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_pipeline_generic' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:158]
+INFO: [Synth 8-6157] synthesizing module 'cordic_pipeline_generic__parameterized0' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:158]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter MAX_STAGES bound to: 16 - type: integer 
+	Parameter LATENCY_WIDTH bound to: 5 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized15' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 0 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized15' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized16' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 1 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized16' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized17' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 2 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized17' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized18' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 3 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized18' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized19' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 4 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized19' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized20' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 5 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized20' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized21' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 6 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized21' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized22' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 7 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized22' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized23' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 8 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized23' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized24' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 9 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized24' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized25' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 10 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized25' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized26' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 11 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized26' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized27' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 12 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized27' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized28' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 13 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized28' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized29' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 14 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized29' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized30' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 15 - type: integer 
+	Parameter MODE_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized30' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_pipeline_generic__parameterized0' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:158]
+INFO: [Synth 8-6157] synthesizing module 'cordic_pipeline_generic__parameterized1' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:158]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter MAX_STAGES bound to: 16 - type: integer 
+	Parameter LATENCY_WIDTH bound to: 5 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized31' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 0 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized31' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized32' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 1 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized32' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized33' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 2 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized33' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized34' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 3 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized34' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized35' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 4 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized35' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized36' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 5 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized36' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized37' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 6 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized37' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized38' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 7 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized38' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized39' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 8 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized39' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized40' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 9 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized40' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized41' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 10 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized41' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized42' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 11 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized42' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized43' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 12 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized43' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized44' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 13 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized44' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized45' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 14 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized45' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'cordic_stage_p__parameterized46' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STAGE_INDEX bound to: 15 - type: integer 
+	Parameter MODE_TYPE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cordic_stage_p__parameterized46' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_pipeline_generic__parameterized1' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:158]
+INFO: [Synth 8-6157] synthesizing module 'q16_mul' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'q16_mul' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_top' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:237]
+INFO: [Synth 8-6157] synthesizing module 'ibex_top' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_top.sv:15]
+	Parameter BaseIsa bound to: 0 - type: integer 
+	Parameter PMPEnable bound to: 1'b0 
+	Parameter PMPGranularity bound to: 32'b00000000000000000000000000000000 
+	Parameter PMPNumRegions bound to: 32'b00000000000000000000000000000100 
+	Parameter MHPMCounterNum bound to: 32'b00000000000000000000000000000000 
+	Parameter MHPMCounterWidth bound to: 32'b00000000000000000000000000101000 
+	Parameter RV32E bound to: 1'b0 
+	Parameter RV32M bound to: 0 - type: integer 
+	Parameter RV32B bound to: 0 - type: integer 
+	Parameter RV32ZC bound to: 0 - type: integer 
+	Parameter RegFile bound to: 1 - type: integer 
+	Parameter BranchTargetALU bound to: 1'b0 
+	Parameter WritebackStage bound to: 1'b0 
+	Parameter ICache bound to: 1'b0 
+	Parameter ICacheECC bound to: 1'b0 
+	Parameter BranchPredictor bound to: 1'b0 
+	Parameter DbgTriggerEn bound to: 1'b0 
+	Parameter DbgHwBreakNum bound to: 32'b00000000000000000000000000000001 
+	Parameter SecureIbex bound to: 1'b0 
+	Parameter LockstepOffset bound to: 32'b00000000000000000000000000000001 
+	Parameter MemECC bound to: 1'b0 
+	Parameter MemDataWidth bound to: 32'b00000000000000000000000000100000 
+	Parameter ICacheScramble bound to: 1'b0 
+	Parameter ICacheScrNumPrinceRoundsHalf bound to: 32'b00000000000000000000000000000010 
+	Parameter ICacheTweakInfection bound to: 1'b0 
+	Parameter DmBaseAddr bound to: 437321728 - type: integer 
+	Parameter DmAddrMask bound to: 4095 - type: integer 
+	Parameter DmHaltAddr bound to: 437323776 - type: integer 
+	Parameter DmExceptionAddr bound to: 437323784 - type: integer 
+	Parameter CsrMvendorId bound to: 0 - type: integer 
+	Parameter CsrMimpId bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ibex_register_file_fpga' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_register_file_fpga.sv:39]
+	Parameter BaseIsa bound to: 0 - type: integer 
+	Parameter RV32E bound to: 1'b0 
+	Parameter DataWidth bound to: 32'b00000000000000000000000000100000 
+	Parameter DummyInstructions bound to: 1'b0 
+	Parameter WordZeroVal bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_register_file_fpga' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_register_file_fpga.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'prim_clock_gating' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_clock_gating.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [C:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:2688]
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (0#1) [C:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:2688]
+INFO: [Synth 8-6155] done synthesizing module 'prim_clock_gating' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_clock_gating.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'prim_buf' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_buf.sv:7]
+	Parameter Width bound to: 32'sb00000000000000000000000000000100 
+INFO: [Synth 8-6155] done synthesizing module 'prim_buf' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_buf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'ibex_core' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:17]
+	Parameter BaseIsa bound to: 0 - type: integer 
+	Parameter PMPEnable bound to: 1'b0 
+	Parameter PMPGranularity bound to: 32'b00000000000000000000000000000000 
+	Parameter PMPNumRegions bound to: 32'b00000000000000000000000000000100 
+	Parameter PMPRstCfg bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter PMPRstAddr bound to: 544'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter PMPRstMsecCfg bound to: 3'b000 
+	Parameter MHPMCounterNum bound to: 32'b00000000000000000000000000000000 
+	Parameter MHPMCounterWidth bound to: 32'b00000000000000000000000000101000 
+	Parameter RV32E bound to: 1'b0 
+	Parameter RV32M bound to: 0 - type: integer 
+	Parameter RV32B bound to: 0 - type: integer 
+	Parameter RV32ZC bound to: 0 - type: integer 
+	Parameter BranchTargetALU bound to: 1'b0 
+	Parameter WritebackStage bound to: 1'b0 
+	Parameter ICache bound to: 1'b0 
+	Parameter ICacheECC bound to: 1'b0 
+	Parameter ICacheTweakInfection bound to: 1'b0 
+	Parameter BusSizeECC bound to: 32'b00000000000000000000000000100000 
+	Parameter TagSizeECC bound to: 32'b00000000000000000000000000010110 
+	Parameter LineSizeECC bound to: 32'b00000000000000000000000001000000 
+	Parameter BranchPredictor bound to: 1'b0 
+	Parameter DbgTriggerEn bound to: 1'b0 
+	Parameter DbgHwBreakNum bound to: 32'b00000000000000000000000000000001 
+	Parameter ResetAll bound to: 1'b0 
+	Parameter RndCnstLfsrSeed bound to: -1403831308 - type: integer 
+	Parameter RndCnstLfsrPerm bound to: 160'b0001111000110101111011001011101001000110011111111101000110110001001011101001010110000001010100101100000001001111101001000011100001111000101010001101101011101101 
+	Parameter SecureIbex bound to: 1'b0 
+	Parameter DummyInstructions bound to: 1'b0 
+	Parameter RegFileECC bound to: 1'b0 
+	Parameter RegFileDataWidth bound to: 32'b00000000000000000000000000100000 
+	Parameter RegFileCapEccWidth bound to: 32'b00000000000000000000000000100011 
+	Parameter MemECC bound to: 1'b0 
+	Parameter MemDataWidth bound to: 32'b00000000000000000000000000100000 
+	Parameter DmBaseAddr bound to: 437321728 - type: integer 
+	Parameter DmAddrMask bound to: 4095 - type: integer 
+	Parameter DmHaltAddr bound to: 437323776 - type: integer 
+	Parameter DmExceptionAddr bound to: 437323784 - type: integer 
+	Parameter CsrMvendorId bound to: 0 - type: integer 
+	Parameter CsrMimpId bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ibex_if_stage' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_if_stage.sv:17]
+	Parameter BaseIsa bound to: 0 - type: integer 
+	Parameter DmHaltAddr bound to: 437323776 - type: integer 
+	Parameter DmExceptionAddr bound to: 437323784 - type: integer 
+	Parameter DummyInstructions bound to: 1'b0 
+	Parameter ICache bound to: 1'b0 
+	Parameter RV32ZC bound to: 0 - type: integer 
+	Parameter ICacheECC bound to: 1'b0 
+	Parameter ICacheTweakInfection bound to: 1'b0 
+	Parameter BusSizeECC bound to: 32'b00000000000000000000000000100000 
+	Parameter TagSizeECC bound to: 32'b00000000000000000000000000010110 
+	Parameter LineSizeECC bound to: 32'b00000000000000000000000001000000 
+	Parameter PCIncrCheck bound to: 1'b0 
+	Parameter ResetAll bound to: 1'b0 
+	Parameter RndCnstLfsrSeed bound to: -1403831308 - type: integer 
+	Parameter RndCnstLfsrPerm bound to: 160'b0001111000110101111011001011101001000110011111111101000110110001001011101001010110000001010100101100000001001111101001000011100001111000101010001101101011101101 
+	Parameter BranchPredictor bound to: 1'b0 
+	Parameter MemECC bound to: 1'b0 
+	Parameter MemDataWidth bound to: 32'b00000000000000000000000000100000 
+INFO: [Synth 8-6157] synthesizing module 'ibex_prefetch_buffer' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_prefetch_buffer.sv:12]
+	Parameter ResetAll bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'ibex_fetch_fifo' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_fetch_fifo.sv:15]
+	Parameter NUM_REQS bound to: 32'b00000000000000000000000000000010 
+	Parameter ResetAll bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_fetch_fifo' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_fetch_fifo.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_prefetch_buffer' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_prefetch_buffer.sv:12]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_if_stage.sv:221]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_if_stage.sv:221]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_if_stage.sv:242]
+INFO: [Synth 8-6157] synthesizing module 'ibex_compressed_decoder' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:17]
+	Parameter RV32ZC bound to: 0 - type: integer 
+	Parameter ResetAll bound to: 1'b0 
+	Parameter BaseIsa bound to: 0 - type: integer 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:225]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:225]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:228]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:228]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:355]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:355]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:405]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:405]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:430]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:430]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:553]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:553]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_compressed_decoder' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_compressed_decoder.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_if_stage' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_if_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'ibex_id_stage' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:21]
+	Parameter RV32E bound to: 1'b0 
+	Parameter RV32M bound to: 0 - type: integer 
+	Parameter RV32B bound to: 0 - type: integer 
+	Parameter DataIndTiming bound to: 1'b0 
+	Parameter BranchTargetALU bound to: 1'b0 
+	Parameter WritebackStage bound to: 1'b0 
+	Parameter BranchPredictor bound to: 1'b0 
+	Parameter MemECC bound to: 1'b0 
+	Parameter BaseIsa bound to: 0 - type: integer 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:416]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:358]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:358]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:465]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:465]
+INFO: [Synth 8-6157] synthesizing module 'ibex_decoder' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:12]
+	Parameter RV32E bound to: 1'b0 
+	Parameter RV32M bound to: 0 - type: integer 
+	Parameter RV32B bound to: 0 - type: integer 
+	Parameter BranchTargetALU bound to: 1'b0 
+	Parameter BaseIsa bound to: 0 - type: integer 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:270]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:338]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:378]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:396]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:396]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:455]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:455]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:464]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:479]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:496]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:538]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:642]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:670]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:706]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:881]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:933]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:1015]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:1015]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:1094]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:1204]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_decoder' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_decoder.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'ibex_controller' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_controller.sv:14]
+	Parameter BaseIsa bound to: 0 - type: integer 
+	Parameter WritebackStage bound to: 1'b0 
+	Parameter BranchPredictor bound to: 1'b0 
+	Parameter MemECC bound to: 1'b0 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_controller.sv:581]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_controller.sv:848]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_controller' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_controller.sv:14]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:884]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:884]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:886]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_id_stage' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_id_stage.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'ibex_ex_block' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_ex_block.sv:11]
+	Parameter RV32M bound to: 0 - type: integer 
+	Parameter RV32B bound to: 0 - type: integer 
+	Parameter BranchTargetALU bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'ibex_alu' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:9]
+	Parameter RV32B bound to: 0 - type: integer 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:54]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:79]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:91]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:114]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:154]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:240]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:297]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:316]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:826]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_alu' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_ex_block' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_ex_block.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'ibex_load_store_unit' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:18]
+	Parameter BaseIsa bound to: 0 - type: integer 
+	Parameter MemECC bound to: 1'b0 
+	Parameter MemDataWidth bound to: 32'b00000000000000000000000000100000 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:142]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:142]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:145]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:145]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:153]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:153]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:165]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:165]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:179]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:179]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:201]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:201]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:270]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:270]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:285]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:285]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:324]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:324]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:363]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:363]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:431]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:614]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_load_store_unit' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'ibex_wb_stage' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_wb_stage.sv:18]
+	Parameter ResetAll bound to: 1'b0 
+	Parameter WritebackStage bound to: 1'b0 
+	Parameter DummyInstructions bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_wb_stage' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_wb_stage.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'ibex_cs_registers' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cs_registers.sv:13]
+	Parameter BaseIsa bound to: 0 - type: integer 
+	Parameter DbgTriggerEn bound to: 1'b0 
+	Parameter DbgHwBreakNum bound to: 32'b00000000000000000000000000000001 
+	Parameter DataIndTiming bound to: 1'b0 
+	Parameter DummyInstructions bound to: 1'b0 
+	Parameter ShadowCSR bound to: 1'b0 
+	Parameter ICache bound to: 1'b0 
+	Parameter MHPMCounterNum bound to: 32'b00000000000000000000000000000000 
+	Parameter MHPMCounterWidth bound to: 32'b00000000000000000000000000101000 
+	Parameter PMPEnable bound to: 1'b0 
+	Parameter PMPGranularity bound to: 32'b00000000000000000000000000000000 
+	Parameter PMPNumRegions bound to: 32'b00000000000000000000000000000100 
+	Parameter PMPRstCfg bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter PMPRstAddr bound to: 544'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter PMPRstMsecCfg bound to: 3'b000 
+	Parameter RV32E bound to: 1'b0 
+	Parameter RV32M bound to: 0 - type: integer 
+	Parameter RV32B bound to: 0 - type: integer 
+	Parameter CsrMvendorId bound to: 0 - type: integer 
+	Parameter CsrMimpId bound to: 0 - type: integer 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cs_registers.sv:418]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cs_registers.sv:770]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cs_registers.sv:889]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cs_registers.sv:892]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cs_registers.sv:1000]
+INFO: [Synth 8-226] default block is never used [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cs_registers.sv:1000]
+INFO: [Synth 8-6157] synthesizing module 'ibex_csr' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+	Parameter Width bound to: 32'b00000000000000000000000000000110 
+	Parameter ShadowCopy bound to: 1'b0 
+	Parameter ResetValue bound to: 6'b010000 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_csr' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'ibex_csr__parameterized0' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+	Parameter Width bound to: 32'b00000000000000000000000000100000 
+	Parameter ShadowCopy bound to: 1'b0 
+	Parameter ResetValue bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_csr__parameterized0' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'ibex_csr__parameterized1' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+	Parameter Width bound to: 32'b00000000000000000000000000010010 
+	Parameter ShadowCopy bound to: 1'b0 
+	Parameter ResetValue bound to: 18'b000000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_csr__parameterized1' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'ibex_csr__parameterized2' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+	Parameter Width bound to: 32'b00000000000000000000000000000111 
+	Parameter ShadowCopy bound to: 1'b0 
+	Parameter ResetValue bound to: 7'b0000000 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_csr__parameterized2' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'ibex_csr__parameterized3' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+	Parameter Width bound to: 32'b00000000000000000000000000100000 
+	Parameter ShadowCopy bound to: 1'b0 
+	Parameter ResetValue bound to: 32'b00000000000000000000000000000001 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_csr__parameterized3' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'ibex_csr__parameterized4' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+	Parameter Width bound to: 32'b00000000000000000000000000100000 
+	Parameter ShadowCopy bound to: 1'b0 
+	Parameter ResetValue bound to: 32'b01000000000000000000000000000011 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_csr__parameterized4' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'ibex_csr__parameterized5' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+	Parameter Width bound to: 32'b00000000000000000000000000000011 
+	Parameter ShadowCopy bound to: 1'b0 
+	Parameter ResetValue bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_csr__parameterized5' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'ibex_counter' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_counter.sv:5]
+	Parameter CounterWidth bound to: 32'sb00000000000000000000000001000000 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_counter' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_counter.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'ibex_counter__parameterized0' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_counter.sv:5]
+	Parameter CounterWidth bound to: 32'sb00000000000000000000000001000000 
+	Parameter ProvideValUpd bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_counter__parameterized0' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_counter.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'ibex_csr__parameterized6' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+	Parameter Width bound to: 32'b00000000000000000000000000000011 
+	Parameter ShadowCopy bound to: 1'b0 
+	Parameter ResetValue bound to: 3'b000 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_csr__parameterized6' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'ibex_csr__parameterized7' [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+	Parameter Width bound to: 32'b00000000000000000000000000001000 
+	Parameter ShadowCopy bound to: 1'b0 
+	Parameter ResetValue bound to: 8'b00000000 
+INFO: [Synth 8-6155] done synthesizing module 'ibex_csr__parameterized7' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_csr.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_cs_registers' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cs_registers.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_core' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_core.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_top' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_top.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'ibex_fpga_top' (0#1) [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv:3]
+WARNING: [Synth 8-6014] Unused sequential element stages[15].op_p_reg[16] was removed.  [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:198]
+WARNING: [Synth 8-6014] Unused sequential element stages[15].op_p_reg[16] was removed.  [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:198]
+WARNING: [Synth 8-6014] Unused sequential element stages[15].op_p_reg[16] was removed.  [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv:198]
+WARNING: [Synth 8-3936] Found unconnected internal register 'shift_result_ext_reg' and it is trimmed from '64' to '32' bits. [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv:269]
+WARNING: [Synth 8-3848] Net multdiv_alu_operand_a in module/entity ibex_ex_block does not have driver. [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_ex_block.sv:59]
+WARNING: [Synth 8-3848] Net multdiv_alu_operand_b in module/entity ibex_ex_block does not have driver. [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_ex_block.sv:59]
+WARNING: [Synth 8-6014] Unused sequential element resp_lc_clrperm_q_reg[CTAG] was removed.  [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:643]
+WARNING: [Synth 8-6014] Unused sequential element resp_lc_clrperm_q_reg[SD_LM] was removed.  [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:643]
+WARNING: [Synth 8-6014] Unused sequential element resp_lc_clrperm_q_reg[GL_LG] was removed.  [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:643]
+WARNING: [Synth 8-6014] Unused sequential element cap_lsw_data_q_reg was removed.  [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:647]
+WARNING: [Synth 8-6014] Unused sequential element cap_lsw_tag_q_reg was removed.  [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_load_store_unit.sv:648]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mhpmcounter_incr_reg' and it is trimmed from '32' to '3' bits. [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cs_registers.sv:1576]
+WARNING: [Synth 8-3848] Net gen_regfile_fpga.ibex_clk in module/entity ibex_top does not have driver. [C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_top.sv:569]
+WARNING: [Synth 8-7129] Port boot_addr_i[7] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port boot_addr_i[6] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port boot_addr_i[5] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port boot_addr_i[4] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port boot_addr_i[3] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port boot_addr_i[2] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port boot_addr_i[1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port boot_addr_i[0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_access_i in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_addr_i[4] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_addr_i[3] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_addr_i[2] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_addr_i[1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_addr_i[0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[31] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[30] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[29] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[28] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[27] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[26] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[25] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[24] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[23] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[22] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[21] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[20] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[19] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[18] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[17] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[16] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[15] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[14] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[13] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[12] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[11] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[10] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[9] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[8] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[7] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[6] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[5] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[4] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[3] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[2] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wdata_i[0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cap_cor][1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cap_cor][0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[valid] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[rsvd] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cperms][5] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cperms][4] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cperms][3] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cperms][2] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cperms][1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cperms][0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[otype][2] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[otype][1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[otype][0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cexp][3] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cexp][2] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cexp][1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[cexp][0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[top][8] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[top][7] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[top][6] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[top][5] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[top][4] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[top][3] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[top][2] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[top][1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[top][0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[base][8] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[base][7] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[base][6] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[base][5] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[base][4] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[base][3] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[base][2] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[base][1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_wcap_i[base][0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_op_i[4] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_op_i[3] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_op_i[2] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_op_i[1] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_op_i[0] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cheriot_csr_op_en_i in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_set_i in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[31] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[30] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[29] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[28] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[27] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[26] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[25] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[24] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[23] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[22] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[21] in module ibex_cs_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_mshwm_new_i[20] in module ibex_cs_registers is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1557.336 ; gain = 716.910
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1615.223 ; gain = 775.137
 ---------------------------------------------------------------------------------
-RTL Elaboration failed
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1615.223 ; gain = 775.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1615.223 ; gain = 775.137
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 1615.223 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_program_bram/ibex_program_bram/ibex_program_bram_in_context.xdc] for cell 'u_program_bram'
+Finished Parsing XDC File [c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_program_bram/ibex_program_bram/ibex_program_bram_in_context.xdc] for cell 'u_program_bram'
+Parsing XDC File [c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz/ibex_clk_wiz_in_context.xdc] for cell 'u_ibex_clk_wiz'
+Finished Parsing XDC File [c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz/ibex_clk_wiz_in_context.xdc] for cell 'u_ibex_clk_wiz'
+Parsing XDC File [C:/Users/devaj/Desktop/ibex_pynq_test/constraints/pynq_z2.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'sys_clk_pin' completely overrides clock 'clk'.
+New: create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} [get_ports clk], [C:/Users/devaj/Desktop/ibex_pynq_test/constraints/pynq_z2.xdc:7]
+Previous: create_clock -period 8.000 [get_ports clk], [c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz/ibex_clk_wiz_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+Finished Parsing XDC File [C:/Users/devaj/Desktop/ibex_pynq_test/constraints/pynq_z2.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/devaj/Desktop/ibex_pynq_test/constraints/pynq_z2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ibex_fpga_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ibex_fpga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1666.121 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGCE => BUFGCTRL: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.266 . Memory (MB): peak = 1666.848 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 1666.848 ; gain = 826.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 1666.848 ; gain = 826.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1666.848 ; gain = 826.762
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'ls_fsm_cs_reg' in module 'ibex_load_store_unit'
+INFO: [Synth 8-802] inferred FSM for state register 'cap_rx_fsm_q_reg' in module 'ibex_load_store_unit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                CRX_IDLE |                                1 |                              000
+                CRX_IDLE |                                1 |                              000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cap_rx_fsm_q_reg' using encoding 'sequential' in module 'ibex_load_store_unit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                             0000
+            WAIT_GNT_MIS |                              001 |                             0001
+         WAIT_RVALID_MIS |                              010 |                             0010
+WAIT_RVALID_MIS_GNTS_DONE |                              011 |                             0100
+                WAIT_GNT |                              100 |                             0011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ls_fsm_cs_reg' using encoding 'sequential' in module 'ibex_load_store_unit'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1666.848 ; gain = 826.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 2     
+	   2 Input   34 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 52    
+	   3 Input   32 Bit       Adders := 81    
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     33 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               34 Bit    Registers := 2     
+	               32 Bit    Registers := 184   
+	               31 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 91    
++---Multipliers : 
+	              32x32  Multipliers := 2     
++---Muxes : 
+	   3 Input   64 Bit        Muxes := 2     
+	   2 Input   64 Bit        Muxes := 5     
+	   3 Input   33 Bit        Muxes := 1     
+	   2 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 130   
+	   3 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 12    
+	  11 Input   32 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 2     
+	   2 Input   21 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 2     
+	   2 Input   19 Bit        Muxes := 2     
+	   2 Input   18 Bit        Muxes := 2     
+	   2 Input   17 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 2     
+	   2 Input   14 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 3     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 10    
+	   4 Input    9 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   8 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 14    
+	  11 Input    5 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 26    
+	   7 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 24    
+	   3 Input    3 Bit        Muxes := 1     
+	  11 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 7     
+	   2 Input    2 Bit        Muxes := 27    
+	  11 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 203   
+	   4 Input    1 Bit        Muxes := 25    
+	   9 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 17    
+	   6 Input    1 Bit        Muxes := 7     
+	  11 Input    1 Bit        Muxes := 18    
+	   7 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_cap_rx_fsm_q_reg) is unused and will be removed from module ibex_load_store_unit.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:53 ; elapsed = 00:03:04 . Memory (MB): peak = 1840.938 ; gain = 1000.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++--------------+----------------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name   | RTL Object                                                     | Inference | Size (Depth x Width) | Primitives   | 
++--------------+----------------------------------------------------------------+-----------+----------------------+--------------+
+|ibex_fpga_top | u_ibex_top/gen_regfile_fpga.register_file_i/g_plain_rf.mem_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++--------------+----------------------------------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:07 ; elapsed = 00:03:18 . Memory (MB): peak = 1856.574 ; gain = 1016.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:32 ; elapsed = 00:03:44 . Memory (MB): peak = 1973.094 ; gain = 1133.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++--------------+----------------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name   | RTL Object                                                     | Inference | Size (Depth x Width) | Primitives   | 
++--------------+----------------------------------------------------------------+-----------+----------------------+--------------+
+|ibex_fpga_top | u_ibex_top/gen_regfile_fpga.register_file_i/g_plain_rf.mem_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++--------------+----------------------------------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:44 ; elapsed = 00:03:56 . Memory (MB): peak = 2063.582 ; gain = 1223.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:54 ; elapsed = 00:04:07 . Memory (MB): peak = 2169.465 ; gain = 1329.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:54 ; elapsed = 00:04:07 . Memory (MB): peak = 2169.465 ; gain = 1329.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:57 ; elapsed = 00:04:10 . Memory (MB): peak = 2169.465 ; gain = 1329.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:57 ; elapsed = 00:04:10 . Memory (MB): peak = 2169.465 ; gain = 1329.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:57 ; elapsed = 00:04:10 . Memory (MB): peak = 2169.465 ; gain = 1329.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:57 ; elapsed = 00:04:10 . Memory (MB): peak = 2169.465 ; gain = 1329.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------+----------+
+|      |BlackBox name     |Instances |
++------+------------------+----------+
+|1     |ibex_clk_wiz      |         1|
+|2     |ibex_program_bram |         1|
++------+------------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |ibex_clk_wiz      |     1|
+|2     |ibex_program_bram |     1|
+|3     |BUFGCE            |     1|
+|4     |CARRY4            |  1203|
+|5     |LUT1              |   157|
+|6     |LUT2              |  1766|
+|7     |LUT3              |   574|
+|8     |LUT4              |   994|
+|9     |LUT5              |  2755|
+|10    |LUT6              |  2549|
+|11    |MUXF7             |   606|
+|12    |MUXF8             |   105|
+|13    |RAM32M            |    10|
+|14    |RAM32X1D          |     4|
+|15    |FDCE              |  5560|
+|16    |FDPE              |    17|
+|17    |FDRE              |   676|
+|18    |IBUF              |     2|
+|19    |OBUF              |     5|
++------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:57 ; elapsed = 00:04:10 . Memory (MB): peak = 2169.465 ; gain = 1329.379
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1113 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:36 ; elapsed = 00:04:01 . Memory (MB): peak = 2169.465 ; gain = 1277.754
+Synthesis Optimization Complete : Time (s): cpu = 00:03:58 ; elapsed = 00:04:11 . Memory (MB): peak = 2176.352 ; gain = 1329.379
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 2184.418 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1929 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2192.055 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  BUFGCE => BUFGCTRL: 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete | Checksum: bf9a8b0b
 INFO: [Common 17-83] Releasing license: Vivado_Synthesis
-14 Infos, 101 Warnings, 0 Critical Warnings and 3 Errors encountered.
-synth_design failed
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1557.336 ; gain = 942.422
-ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Thu Oct  8 02:24:10 2026...
+286 Infos, 218 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:08 ; elapsed = 00:04:26 . Memory (MB): peak = 2192.070 ; gain = 1578.035
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2192.070 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/ibex_fpga_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file ibex_fpga_top_utilization_synth.rpt -pb ibex_fpga_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 10:30:08 2026...

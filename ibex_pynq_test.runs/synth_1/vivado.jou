@@ -3,8 +3,8 @@
 # SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Thu Oct  8 02:23:46 2026
-# Process ID         : 19768
+# Start of session at: Wed Oct 14 10:25:16 2026
+# Process ID         : 13432
 # Current directory  : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1
 # Command line       : vivado.exe -log ibex_fpga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ibex_fpga_top.tcl
 # Log file           : C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.runs/synth_1/ibex_fpga_top.vds
@@ -17,8 +17,8 @@
 # CPU Physical cores : 10
 # CPU Logical cores  : 16
 # Host memory        : 16849 MB
-# Swap memory        : 2493 MB
-# Total Virtual      : 19343 MB
-# Available Virtual  : 1975 MB
+# Swap memory        : 1073 MB
+# Total Virtual      : 17923 MB
+# Available Virtual  : 4156 MB
 #-----------------------------------------------------------
 source ibex_fpga_top.tcl -notrace

@@ -1,0 +1,67 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Tue Oct 13 03:15:55 2026
+| Host         : Devaj running 64-bit major release  (build 9200)
+| Command      : report_methodology -file C:/Users/devaj/Desktop/ibex_pynq_test/methodology_after_fix.rpt
+| Design       : ibex_fpga_top
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: impl_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 4
++-----------+------------------+--------------------------------------------------------+--------+
+| Rule      | Severity         | Description                                            | Checks |
++-----------+------------------+--------------------------------------------------------+--------+
+| TIMING-14 | Critical Warning | LUT on the clock tree                                  | 1      |
+| LUTAR-1   | Warning          | LUT drives async reset alert                           | 1      |
+| XDCC-7    | Warning          | Scoped Clock constraint overwritten on the same source | 1      |
+| LATCH-1   | Advisory         | Existing latches in the design                         | 1      |
++-----------+------------------+--------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT u_ibex_top/core_clock_gate_i/valid_q[2]_i_4 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell u_cordic/u_lin/FSM_sequential_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) cordic_circ_x_reg[0]/CLR, cordic_circ_x_reg[10]/CLR,
+cordic_circ_x_reg[11]/CLR, cordic_circ_x_reg[12]/CLR,
+cordic_circ_x_reg[13]/CLR, cordic_circ_x_reg[14]/CLR,
+cordic_circ_x_reg[15]/CLR, cordic_circ_x_reg[16]/CLR,
+cordic_circ_x_reg[17]/CLR, cordic_circ_x_reg[18]/CLR,
+cordic_circ_x_reg[19]/CLR, cordic_circ_x_reg[1]/CLR,
+cordic_circ_x_reg[20]/CLR, cordic_circ_x_reg[21]/CLR,
+cordic_circ_x_reg[22]/CLR (the first 15 of 5577 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} [get_ports clk] (Source: C:/Users/devaj/Desktop/ibex_pynq_test/constraints/pynq_z2.xdc (Line: 7))
+Previous: create_clock -period 8.000 [get_ports clk] (Source: C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz.xdc (Line: 53))
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 1 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+

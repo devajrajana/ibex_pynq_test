@@ -56,14 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param general.usePosixSpawnForFork 1
-set_param chipscope.maxJobs 1
-set_param synth.incremental.totalBlackboxInstancesCount 1
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
-set_msg_config  -id {17-179}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -86,14 +79,29 @@ set_property include_dirs {
 } [current_fileset]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/Users/devaj/Desktop/ibex_pynq_test/sw/program.coe
-read_verilog C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_assert.sv
+add_files C:/Users/devaj/Desktop/ibex_pynq_test/sw/program.coe
+read_verilog {
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_assert.sv
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_assert_dummy_macros.svh
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_assert_sec_cm.svh
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_flop_macros.sv
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/dv_fcov_macros.svh
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_fifo_assert.svh
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_util_memload.svh
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_util_get_scramble_params.svh
+}
 set_property file_type "Verilog Header" [get_files C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_assert.sv]
+set_property file_type "Verilog Header" [get_files C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_assert_dummy_macros.svh]
+set_property file_type "Verilog Header" [get_files C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_assert_sec_cm.svh]
+set_property file_type "Verilog Header" [get_files C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_flop_macros.sv]
+set_property file_type "Verilog Header" [get_files C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/dv_fcov_macros.svh]
+set_property file_type "Verilog Header" [get_files C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_fifo_assert.svh]
+set_property file_type "Verilog Header" [get_files C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_util_memload.svh]
+set_property file_type "Verilog Header" [get_files C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_util_get_scramble_params.svh]
 read_verilog -library xil_defaultlib -sv {
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/cordic_top.sv
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_pkg.sv
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_alu.sv
-  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_flop_macros.sv
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_branch_predict.sv
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_pkg.sv
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex/ibex_cheriot_ex.sv
@@ -153,12 +161,14 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_secded_inv_hamming_39_32_dec.sv
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_secded_inv_hamming_39_32_enc.sv
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_prim/prim_subst_perm.sv
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/uart_rx.sv
+  C:/Users/devaj/Desktop/ibex_pynq_test/rtl/uart_tx.sv
   C:/Users/devaj/Desktop/ibex_pynq_test/rtl/ibex_fpga_top.sv
 }
-read_ip -quiet c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.srcs/sources_1/ip/ibex_program_bram/ibex_program_bram.xci
+read_ip -quiet C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.srcs/sources_1/ip/ibex_program_bram/ibex_program_bram.xci
 set_property used_in_implementation false [get_files -all c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_program_bram/ibex_program_bram_ooc.xdc]
 
-read_ip -quiet c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.srcs/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz.xci
+read_ip -quiet C:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.srcs/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz.xci
 set_property used_in_implementation false [get_files -all c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/devaj/Desktop/ibex_pynq_test/ibex_pynq_test.gen/sources_1/ip/ibex_clk_wiz/ibex_clk_wiz_ooc.xdc]

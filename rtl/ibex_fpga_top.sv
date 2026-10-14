@@ -27,15 +27,16 @@ module ibex_fpga_top (
 
 
     // ================================================================
-    // UART TX
-    //
-    // Clock       : 50 MHz
+    // UART TX/RX
+    // Clock       : 50 MHz (must match the clock-wizard output)
     // Baud rate   : 115200
     // Format      : 8-N-1
     //
     // MMIO:
     //   0x1060 = UART_TXDATA
-    //   0x1064 = UART_STATUS
+    //   0x1064 = UART_STATUS (bit 0 = TX busy)
+    //   0x1068 = UART_RXDATA (read received byte; clears available)
+    //   0x106C = UART_RX_STATUS (bit 0 = byte available, bit 1 = RX busy)
     // ================================================================
 
     logic       uart_tx_start;
@@ -54,9 +55,51 @@ module ibex_fpga_top (
         .tx_busy   (uart_tx_busy)
     );
 
+    // UART RX interface and holding register.
+    logic [7:0] uart_rx_data;
+    logic       uart_rx_valid;
+    logic       uart_rx_busy;
+    logic [7:0] uart_rx_data_hold;
+    logic       uart_rx_available;
+    logic       uart_rx_read;
 
-    localparam logic [11:0] UART_TXDATA = 12'h060;
-    localparam logic [11:0] UART_STATUS = 12'h064;
+    uart_rx #(
+        .CLK_FREQ  (50_000_000),
+        .BAUD_RATE (115_200)
+    ) u_uart_rx (
+        .clk      (ibex_clk),
+        .rst_n    (reset_n),
+        .rx       (uart_rx),
+        .rx_data  (uart_rx_data),
+        .rx_valid (uart_rx_valid),
+        .rx_busy  (uart_rx_busy)
+    );
+
+    localparam logic [11:0] UART_TXDATA    = 12'h060;
+    localparam logic [11:0] UART_STATUS    = 12'h064;
+    localparam logic [11:0] UART_RXDATA    = 12'h068;
+    localparam logic [11:0] UART_RX_STATUS = 12'h06C;
+
+    // A read of UART_RXDATA acknowledges the held byte. A newly received
+    // byte takes priority if it arrives on the same clock as the read.
+    always_comb begin
+        uart_rx_read = data_req && !data_gnt && !data_we &&
+                       (data_addr[11:0] == UART_RXDATA);
+    end
+
+    always_ff @(posedge ibex_clk or negedge reset_n) begin
+        if (!reset_n) begin
+            uart_rx_data_hold <= 8'h00;
+            uart_rx_available <= 1'b0;
+        end else begin
+            if (uart_rx_valid) begin
+                uart_rx_data_hold <= uart_rx_data;
+                uart_rx_available <= 1'b1;
+            end else if (uart_rx_read) begin
+                uart_rx_available <= 1'b0;
+            end
+        end
+    end
 
 
     // ================================================================
@@ -335,6 +378,14 @@ module ibex_fpga_top (
 
                     UART_STATUS:
                         data_rdata_reg <= {31'd0, uart_tx_busy};
+
+                    // Most recently received byte.
+                    UART_RXDATA:
+                        data_rdata_reg <= {24'd0, uart_rx_data_hold};
+
+                    // bit 0 = unread byte available; bit 1 = receiver busy.
+                    UART_RX_STATUS:
+                        data_rdata_reg <= {30'd0, uart_rx_busy, uart_rx_available};
 
                     default:
                         data_rdata_reg <= 32'h0000_0000;
